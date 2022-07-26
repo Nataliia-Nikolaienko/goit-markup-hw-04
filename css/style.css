@@ -126,6 +126,8 @@ img {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
+    display: flex;
+    align-items: center;
 }
 
 .menu-link:hover,
@@ -161,20 +163,32 @@ img {
 .contact-email:focus {
     color: var(--accent-color);
 }
-/* =====================/HEADER====================== */
-/* =====================HERO====================== */
-.hero-bg {
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)) url(../images/hero/bg.jpg);
-    background-size: cover;
-    background-color: #C4C4C4;
+
+.header-contact-icon {
+    margin-right: 10px;
+    fill: currentColor;
+    order: -1;
 }
 
+.header-contact-icon:hover,
+.header-contact-icon:focus {
+    fill: #2196F3;
+}
+
+/* =====================/HEADER====================== */
+/* =====================HERO====================== */
+
 .hero {
-    background-color: #2F303A;
     margin-top: 0px;
     text-align: center;
     padding-top: 200px;
     padding-bottom: 200px;
+
+    background-color: #c4c4c4;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .content-title {
@@ -226,6 +240,17 @@ img {
 
 .advantages-box {
     align-items: stretch;
+}
+
+.advantages-icon { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 25px 0;
+
+    background: #F5F4FA;
+    border-radius: 4px;
 }
 
 .advantages-title {
@@ -294,11 +319,12 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-.icon-list > li:not(:last-child) {
+/* .icon-list > li:not(:last-child) {
     margin-right: 10px;
-}
+} */
 
 .icon {
     display: flex;
@@ -306,12 +332,22 @@ img {
     align-items: center;
     width: 44px;
     height: 44px;
-    border-radius: 44px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
 }
 
 .icon:hover,
 .icon:focus {
-    background-color: var(accent-color);
+    background-color: var(--accent-color);
+}
+
+.icon:hover .media-icons,
+.icon:focus .media-icons {
+    fill: #FFFFFF;
+}
+
+.media-icons {
+    fill: #AFB1B8;
 }
 
 .team-box {
@@ -321,6 +357,45 @@ img {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 /* =====================/EMPLOYEES====================== */
+
+/* =====================CLIENTS====================== */
+.clients-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;   
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.clients-icon {
+    fill: #AFB1B8;
+}
+
+.clients-list > li:not(:last-child) {
+    margin-right: 30px;
+}
+
+.clients-link:hover,
+.clients-link:focus {
+    border-color: var(--accent-color);
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+    fill: var(--accent-color);
+}
+
+
+/* =====================/CLIENTS====================== */
 
 /* =====================FOOTER====================== */
 footer {
@@ -377,6 +452,12 @@ footer {
 .phone-number:hover,
 .phone-number:focus {
     color: var(--accent-color);
+}
+
+.social-footer {
+    display: flex;
+    align-items: center;
+     
 }
 /* =====================/FOOTER====================== */
 
